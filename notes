@@ -1,0 +1,107 @@
+types of programming
+    declarative:what to do,allowed by react
+    imperative:how to do(how should it be done),js apppend
+
+JSX
+    javascript xml
+    uses className instead of className
+    allows to write html in js
+    returns json
+    render one parent element only
+    js and jsx can be used together (js inside {} in jsx)
+
+react project start(nodejs needed)
+    npx create-react-app my-app(appname)
+    cd my-app
+    npm start
+
+component 
+    capitalize first letter
+    wrap it into <> eg: <Component />
+    when in a new file add export default name in the end
+
+react ran two ways
+    npx create-react-app//slow
+    npm create vite@latest
+
+props
+    added to the components
+    basically properties
+    components have dispaly logic which gets data from props
+    props used as parameter in the components
+    import React, { useEffect } from "react"
+    returns json
+    donot change from within the body
+
+props usage
+<div className="contacts">
+            <Contact 
+                img="./images/mr-whiskerson.png" 
+                name="Mr. Whiskerson"
+                phone="(212) 555-1234"
+                email="mr.whiskaz@catnap.meow"
+                num={12345}
+            />
+ expoert default function Contact ({img,name,phone,email})
+export default function Contact(props) {
+    console.log(props)
+    return (
+        <div className="contact-card">
+            <img src={props.img}/>
+            <h3>{props.name}</h3>
+            <div className="info-group">
+                <img src="./images/phone-icon.png" />
+                <p>{props.phone}</p>
+            </div>
+            <div className="info-group">
+                <img src="./images/mail-icon.png" />
+                <p>{props.email}</p>
+            </div>
+        </div>
+    )
+}
+
+spread
+    {...item}
+
+react state
+    used when have changing values and saved or displayed
+    React.useState()=>array with second item as func
+    used array destructiong with it
+    use callback function with in the set func
+    Note: if you ever need the old value of state
+     * to help you determine the new value of state,
+     * you should pass a callback function to your
+     * state setter function instead of using
+     * state directly. This callback function will
+     * receive the old value of state as its parameter,
+     * which you can then use to determine your new
+     * value of state.
+    keep it as local as we can
+    to change props define state within the child component called derived state(not good)
+    rather than derived state pass functions as props
+
+forms in react
+    uses state and watching every change
+    used onChange event listener to listen to any changes having there
+
+controlled components
+    making the states in form of object
+    name in html dom should match to the state names
+
+API calls
+    with fetch when used state goes infinite loop
+    outside effects{localStorage,api interactions} meaning react doesnot involve in them you can write the js cod ebut react doesnot involve
+    effect hook(useEffect()) allows use to interact outside react ecosystem
+
+useEffect()
+    always runs on first render
+    has two parameter first callback function & 2nd dependencies array
+    callback function has side effect codes
+    dependencies array determines when it will rerun the useEffect
+
+useEffect cleanup
+    return function in useEffect function
+    remove memory leakage
+
+
