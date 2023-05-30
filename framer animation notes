@@ -1,0 +1,18 @@
+framer motion library in react 
+    animations without CSS
+    npm install framer motion
+    import { motion } from 'framer-motion'
+    add motion befor tags eg motion.div
+    has props like AnimationEffect, initial, transition
+
+transition types 
+    tween
+        has duration to make the animation smooth
+    spring
+        real life spring has bounce, stiffness
+    inertia
+        real life inertia has velocity and others
+
+
+animation to get triggered on events
+    

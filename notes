@@ -4,7 +4,7 @@ types of programming
 
 JSX
     javascript xml
-    uses className instead of className
+    uses className instead of class
     allows to write html in js
     returns json
     render one parent element only
@@ -104,4 +104,10 @@ useEffect cleanup
     return function in useEffect function
     remove memory leakage
 
+react-split, nanoid, react-mde, markdown to html converter, 
 
+lazystate initialization
+    state initialized only once
+    pass function in the state
+
+    
