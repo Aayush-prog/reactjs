@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Day({dayData}){
+    //destructing an array
     const {dt, weather, name , main }=dayData
     return (
         <div

@@ -1,7 +1,9 @@
 import React from 'react'
 
 export default function Hourly({ cityData }) {
+    //destructuring an array
     const { dt, weather, main } = cityData;
+    //converting the utc into hours and minutes
     const date= new Date(dt*1000);
     const time= `${date.getHours()}:${date.getMinutes()}`
 
