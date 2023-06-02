@@ -4,12 +4,14 @@ import './App.css'
 import Search from './components/Search'
 import Hourly from './components/Hourly'
 import Day from './components/Day'
+import Forecast from './components/Forecast'
 function App() {
   //setting neccsarry state for the child components
   const apikey = "4c686e53a642140655d04f47fee6b7b8"
   const [cityName, setCityName]=React.useState("")
   const [cityData, setCityData]=React.useState([])
   const [dayData,setDayData]=React.useState([])
+  const [forecastData,setForecastData]=React.useState([])
   //function to handle change on the input
   function handleChange(event){
     const {value}=event.target
@@ -34,21 +36,33 @@ function App() {
       .then(data => {
         setCityData(data.list)
       });
+      fetch(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${cityName}&units=metric&cnt=15&appid=${apikey}`)
+      .then(res => res.json())
+      .then(data => {
+        setForecastData(data.list);
+      });    
   }
   //mapping multiple eements of same component with diff value
-  const cards= cityData.map((item,index)=>{
-    return <Hourly className="bg-gray-300 p-4" key={index} cityData={item}/>
+  const hours= cityData.map((item,index)=>{
+    return <Hourly key={index} cityData={item}/>
   })
+  const forecast=forecastData.map((item,index)=>{
+    return <Forecast key={index} forecastData={item}/>
+  })
+  //calling the components
 return (
   <div>
     <Search
     handleChange={handleChange}
     handleClick={handleClick}/>
-    <Day
-    dayData={dayData[0]}/>
+    {dayData.length > 0 && <Day dayData={dayData[0]} />}
     <div 
-    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
-      {cards}
+    className="  scrollbar-hide relative flex items items-center justify-between overflow-x-scroll scroll-smooth">
+      {hours}
+    </div>
+    <div 
+    className="  scrollbar-hide relative flex items items-center justify-between overflow-x-scroll scroll-smooth">
+      {forecast}
     </div>
   </div>  
   );
