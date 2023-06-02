@@ -11,7 +11,8 @@ export default function Search(props) {
         {/* using icon component */}
         <BiSearch
         className="text-4xl"
-        onClick={props.handleClick}/>
+        onClick={props.handleClick}
+        />
       </button>
     </div>
   );
