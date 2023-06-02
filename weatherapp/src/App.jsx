@@ -56,10 +56,12 @@ return (
     handleChange={handleChange}
     handleClick={handleClick}/>
     {dayData.length > 0 && <Day dayData={dayData[0]} />}
+    <h1 className='text-center'>Hourly Forecast</h1>
     <div 
     className="  scrollbar-hide relative flex items items-center justify-between overflow-x-scroll scroll-smooth">
       {hours}
     </div>
+    <h1 className='mt-2 text-center'>15 day forecast</h1>
     <div 
     className="  scrollbar-hide relative flex items items-center justify-between overflow-x-scroll scroll-smooth">
       {forecast}
