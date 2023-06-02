@@ -8,7 +8,7 @@ export default function Day({dayData}){
     const time = date.toLocaleDateString(undefined, options);
     return (
         <div
-        className="w-3/4 shadow-2xl text-center mx-auto p-2 mb-10 border border-solid border-black rounded-xl">
+        className="w-3/4 shadow-2xl text-center mx-auto p-2 mb-10 bg-white bg-opacity-10 rounded-xl">
             <h1>{name}</h1>
             <h1>{time}</h1>
             <h1>{weather[0].main}</h1>

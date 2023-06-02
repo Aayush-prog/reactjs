@@ -6,7 +6,7 @@ export default function Search(props) {
       <input 
       onChange={props.handleChange}
       type="text"
-      className="m-3 p-1 w-1/2 shadow-2xl border border-solid border-black rounded-lg" />
+      className="m-3 mt-0 mb-0 p-1.5 w-1/2 shadow-2xl bg-white bg-opacity-10 rounded-lg bg-transparent" />
       <button>
         {/* using icon component */}
         <BiSearch
