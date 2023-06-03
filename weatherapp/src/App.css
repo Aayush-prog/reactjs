@@ -4,5 +4,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color:white
+  color:white;
+  overflow-y: hidden;
+}
+#root{
+  height:100vh
 }
