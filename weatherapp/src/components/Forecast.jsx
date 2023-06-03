@@ -9,9 +9,9 @@ export default function Forecast({ forecastData }) {
     const time = date.toLocaleDateString(undefined, options);
 
     return (
-      <div className="mx-3 my-7 p-3 shadow-2xl rounded-xl bg-white bg-opacity-10 inline-block ">
+      <div className="mx-3 my-5 p-3 inline-block ">
         <h2>{time}</h2>
-        <p>{weather[0].icon}</p>
+        <img src={`https://openweathermap.org/img/wn/${weather[0].icon}.png`} alt="icon.png"/>
         <h2>{temp.day}</h2>
       </div>
     );
