@@ -1,0 +1,32 @@
+multithreaded and single threaded model
+
+node js typical model (single threaded)
+
+package.json
+    metadata file for all npm package
+    has identifier(identification of the project) and functional(instructions for npm)
+
+event loop
+    six opereations to perform specific task
+    impplemented by C library
+    keeps Node.js running with asynchronous operations
+    cycle=>timer(executing callback settimeout and setinterval),pending callback(execute idle callback),idle prepare,poll(how long its ahould block io events,when timers should execute),check(execute callback immediately after poll),close callback(cleanup close callbacks and events)
+
+I/O cycle
+    occurs between eventloop and the backthread pool(referring to the dbs)
+    setimmediate get priority in i/o cycle
+
+anatomy of node.js module
+    js file
+    reusable code
+    exportable and importable
+    use require to import(object)
+    use module.exports to export(object)
+    2 types(core,3rd party,local)
+
+creating module
+    require,exports,module,__dirname,__filename(unseen parameters)
+    use module.exports to export data fromthe module
+    when multiple data top be exported use key value as in oject (module.export.names=['aayush','anish'])
+    
+
