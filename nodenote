@@ -28,5 +28,59 @@ creating module
     require,exports,module,__dirname,__filename(unseen parameters)
     use module.exports to export data fromthe module
     when multiple data top be exported use key value as in oject (module.export.names=['aayush','anish'])
-    
 
+importing module
+    use require(let info=require('./info'))
+
+HTTP module
+    core node.js module
+    create HTTP server
+    allow data to transfer over HTTP protocol
+     
+http.createServer
+    import http as const http=require('http')
+    create server as const server=http.createServer
+    two parameter(request and response)
+    always end the response using response.end() if not end it is like an infinite loop
+    and add the server.listen(portno)
+
+respond http request
+    POST,GET,PUT,DELETE(CRUD)
+    http.request() or http.get()
+    request method passed to request object
+
+http.request
+    two parameters options and resposne
+    optons has hostname.port,path,method,header
+    responseuses response.on for the response
+    always end at last
+    example:
+    const request=http.request((options,respons={}))
+    request.end()
+
+routing
+    url pattern
+    is done by request.url==='/where to route' 
+
+require('fs') 
+    allows use to access the file system or read the files
+    fs.readFile(file with full directory,{err,data}=>{
+    })
+
+process.env.PORT to check is the port exist
+
+Node.js is the " N" in MEAN stack.
+Node.js uses JavaScript as the main server-side language. It is an open-source JavaScript runtime environment.
+An HTTP server library is in-built in Node.js.
+NPM is the package manager for Node.js. It provides important commands used for coding in Node.js.
+Package.json is a metadata file for all Node.js projects. There are two types of metadata: identifier and functional. Packaage.json file is incomplete without these two fields: name and version.
+Node.js uses a single-threaded model. 
+Event Loop Cycle - There are six major phases of the Event Loop Cycle: Timers, Pending Callbacks, Idle, prepare, Poll, Check, and Close Callbacks. The set immediate function is the most important in the Event Loop Cycle.
+The asynchronous and synchronous file functions can be used interchangeably in a Node.js environment.
+A Node.js module is any JavaScript file in the environment. It contains reusable codes that can be shared by other modules. In order to share these codes, the codes must be exported and imported to the required module.
+The three types of Node.js modules : Core, 3rd Party and Local A, B, and C. 3rd Party modules are the largest can be downloaded for free.
+The name, placement and ./ notation are important importing and exporting local modules.
+The main purpose of the HTTP module is to create the HTTP server. It has three main properties: HTTP.createServer(), http.get() and http.request(). 
+A Node.js request method is made with http.request() or http.get(). The HTTP Request methods include : POST, GET, PUT, and DELETE.
+The three step by step processes used to create a Sample Node.js application are: Creating the App File and Templates, Creating an HTTP Server and Creating Route Patterns.
+A route is a URL pattern. 
