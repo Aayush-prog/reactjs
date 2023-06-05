@@ -22,7 +22,7 @@ anatomy of node.js module
     exportable and importable
     use require to import(object)
     use module.exports to export(object)
-    2 types(core,3rd party,local)
+    3 types(core,3rd party,local)
 
 creating module
     require,exports,module,__dirname,__filename(unseen parameters)
