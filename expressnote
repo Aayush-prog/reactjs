@@ -1,0 +1,35 @@
+express expands http of nodejs basically built upon it
+
+installing and testing
+    npm install express
+
+const express=require('express')
+const { start } = require('repl')
+const { engine } = require('./express/app')
+const app=express()
+no need to do create server and all that in express
+
+routing in express
+    used get method with url and cal back function
+    example:
+    app.get('/',(req,res)=>{
+    render(res,'index.html')
+})
+
+express generator
+    program that will create express automatically for us
+    npx express-generatior --view=templateName
+    use --view to use specific template(default jade template)
+
+node monitor
+    module to monitor any changes
+    npm install -g nodemon
+    now just use nodemon instead of npm start
+
+restructing express app
+    mvc(model view controller)
+
+template engine
+    process to output tokenized variables to another format(HTML,XML)
+    uses template language to process data
+    example jade(default replace with pug),ejs,handlebars
