@@ -28,8 +28,34 @@ node monitor
 
 restructing express app
     mvc(model view controller)
+    model=datafile
+    view=layout
+    controller=rendering (handling the request)
 
 template engine
     process to output tokenized variables to another format(HTML,XML)
     uses template language to process data
     example jade(default replace with pug),ejs,handlebars
+
+middleware functions
+    application level, router level, built in, third party and error handling
+    callback functions that act on http methods
+    has req, res and next
+    if doesnot end the req or res cycle must call next
+
+Appplication level
+    function bound to instance of app object (app.get,app.put)
+
+Router level
+    like applicaiton level and bound to router (express.Router)
+    used for code restructuring
+
+Err handling
+    same like other but has 4 parameters error, req,res and next
+
+Express.js is a node module. The Express.js Framework is an open-source Node.js web application framework. Other frameworks are built on the Express framework, such as Loopback,Sails,NestJS,andFeathers.
+The Express.js sits on top of the Node.js HTTP Server. It expands the HTTP Module to provide business logic.
+The two methods of installing Express.js are using: npm and yarn.
+The two ways for creating a Node.js Express App include: using express-generator and set a specific template.
+The template engines available for Node.js are Jade, EJS, Handlebars, and Mustache. The syntax of handlebars is similar to the syntax of Angular's template language syntax.
+The Model View Controller supports rapid and parallel development.
