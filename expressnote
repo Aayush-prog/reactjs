@@ -59,3 +59,7 @@ The two methods of installing Express.js are using: npm and yarn.
 The two ways for creating a Node.js Express App include: using express-generator and set a specific template.
 The template engines available for Node.js are Jade, EJS, Handlebars, and Mustache. The syntax of handlebars is similar to the syntax of Angular's template language syntax.
 The Model View Controller supports rapid and parallel development.
+
+.post metod to send data
+day13
+damn not reading today
