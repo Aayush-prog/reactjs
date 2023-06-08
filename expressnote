@@ -63,3 +63,29 @@ The Model View Controller supports rapid and parallel development.
 .post metod to send data
 day13
 damn not reading today
+
+REST API
+    Representational State Transfer
+    rules how a system transfers data over the web
+    uses URL(endpoints), HTTPS, and JSON format
+    scalability, performance, cacheable data, and flexibility
+    complete control of data
+    shut down instantly in case of data breach
+
+CRUD=POST,GET,PUT,DELETE
+
+API testing
+    for security and reliability
+    tools:katalon, soapui,postman,curl
+
+Refactoring API
+    validating input
+    error handling
+    sending status codes
+
+The types of Middleware functions: Application-level, Router-level, Error handling, Built-in and Third-party. The router-level middleware is best suited for code restructuring.
+API is the plug-in interface of a modem or system.
+REST API is a set of rules of how systems can transfer data over the web. In order for the data to be transferred, they must be serialized into text using the JSON data format.
+It is important to test APIs for security and reliability.
+Postman and SoapUI are one of the testing tools of API.
+CRUD operations can be performed with Rest APIs. 
