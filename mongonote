@@ -1,0 +1,17 @@
+Mongo DB
+    open source no sql dbms
+    document oriented database model
+    can store various unstructed complex data
+    made up of ocllections and unstructured data
+    data stored in BSON(Binary representation of JSON like document)
+    used for big data apps
+
+Mongo DB objects
+    Database:physical container or set of files for storing collections
+    COllection:equivalent to a table in RDBMS,collection of documents
+    Document:equivalent to row in RDBMS,has a set of key-value apir identical to JSON format
+
+installing MongoDB
+    mongodb atlas to use mongo db over the web without installation
+
+
