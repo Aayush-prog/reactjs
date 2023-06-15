@@ -1,0 +1,12 @@
+body{
+    width:100vh;
+    background-color: #46494C;
+    font-family: 'Inter';
+    color:#C5C3C6;
+}
+header{
+    text-align: center;
+}
+header h1{
+    font-weight: bold;
+}
